@@ -16,22 +16,27 @@ module API
       before_action :authorized
 
       rescue_from RenderReturnException, with: :render_return
+      rescue_from ActionController::ParameterMissing, with: :param_missing
 
       def render_return; end
+
+      def param_missing(_)
+        error = { request: ['invalid arguments'] }
+        render json: { errors: translate_error(:main, error) }, status: :bad_request
+      end
 
       def encode_token(payload)
         JWT.encode(payload, SECRET_TOKEN)
       end
 
+      # header: { 'Authorization': 'Bearer <token>' }
       def auth_header
-        # { Authorization: 'Bearer <token>' }
         request.headers['Authorization']
       end
 
       def decoded_token
         if auth_header
           token = auth_header.split(' ')[1]
-          # header: { 'Authorization': 'Bearer <token>' }
           begin
             JWT.decode(token, SECRET_TOKEN, true, algorithm: 'HS256')
           rescue JWT::DecodeError

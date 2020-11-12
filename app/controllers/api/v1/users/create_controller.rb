@@ -35,7 +35,7 @@ module API
         end
 
         def serialized_output(data)
-          token = encode_token({user_id: data.id})
+          token = encode_token({ user_id: data.id })
 
           UserSerializer.new(data, params: { token: token }).serialized_json
         end

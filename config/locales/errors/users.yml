@@ -20,3 +20,5 @@ en:
           code: 'users-0008'
         email_must_be_uniq:
           code: 'users-0009'
+        password_is_missing:
+          code: 'users-0010'
