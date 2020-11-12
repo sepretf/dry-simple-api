@@ -1,0 +1,75 @@
+inherit_from:
+  - ./rubocop/bundler.yml
+  - ./rubocop/layout.yml
+  - ./rubocop/lint.yml
+  - ./rubocop/metrics.yml
+  - ./rubocop/naming.yml
+  - ./rubocop/performance.yml
+  - ./rubocop/rails.yml
+  - ./rubocop/security.yml
+  - ./rubocop/style.yml
+  - ./rubocop/rspec/capybara.yml
+  - ./rubocop/rspec/factory_bot.yml
+  - ./rubocop/rspec/rails.yml
+  - ./rubocop/rspec/rspec.yml
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - './db/**/*'
+    - './lib/tasks/*'
+    - './bin/bundle'
+# A file could define multiples classes
+Naming/FileName:
+  Enabled: false
+# Testing API lead to String keys
+Style/StringHashKeys:
+  Exclude:
+    - 'spec/**/*'
+# The default 80 chars is too small for great named modules.
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - 'config/deploy/**'
+# Take too much time to be maintained
+Style/Documentation:
+  Enabled: false
+Rails/Output:
+  Exclude:
+    - 'config/deploy/**'
+# Mongoid doesn't have `update!`
+# The auto-correct break the code.
+Rails/SaveBang:
+  Enabled: false
+# Else is not required
+Style/MissingElse:
+  Enabled: false
+Style/MixinUsage:
+  Exclude:
+    - 'bin/**/*'
+# Legacy relations + Mongodb
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Metrics/ParameterLists:
+  Max: 8
+# Configs could exit
+Rails/Exit:
+  Exclude:
+    - 'config/**/*'
+# Conflict with a keyword
+Lint/Void:
+  Exclude:
+    - 'app/containers/**/*'
+Lint/MissingSuper:
+  Enabled: false
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - quality
+    - staging
+    - test

@@ -1,0 +1,15 @@
+Bundler/DuplicatedGem:
+  Enabled: true
+  Include: ['**/*.gemfile', '**/Gemfile', '**/gems.rb']
+
+Bundler/GemComment:
+  Enabled: false
+
+# Override
+Bundler/InsecureProtocolSource:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: true
+  TreatCommentsAsGroupSeparators: true
+  Include: ['**/*.gemfile', '**/Gemfile', '**/gems.rb']

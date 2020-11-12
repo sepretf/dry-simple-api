@@ -1,0 +1,11 @@
+en:
+  plezi:
+    errors:
+      main:
+        request_invalid_arguments:
+          code: 'request-0001'
+        request_unauthorized_access:
+          code: 'request-0002'
+        request_resource_not_found:
+          code: 'request-0003'
+

@@ -1,0 +1,222 @@
+Rails:
+  Enabled: true
+
+Rails/ActionFilter:
+  Enabled: true
+  EnforcedStyle: action
+  Include:
+    - app/controllers/**/*.rb
+
+Rails/ActiveRecordAliases:
+  Enabled: true
+
+Rails/ActiveSupportAliases:
+  Enabled: true
+
+# Override
+Rails/ApplicationJob:
+  Enabled: false
+
+# Override
+Rails/ApplicationRecord:
+  Enabled: false
+
+# Override
+Rails/AssertNot:
+  Enabled: false
+
+Rails/Blank:
+  Enabled: true
+  NilOrEmpty: true
+  NotPresent: true
+  UnlessPresent: true
+
+# Override
+Rails/BulkChangeTable:
+  Enabled: false
+
+# Override
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+
+# Override
+Rails/Date:
+  Enabled: true
+  EnforcedStyle: strict
+
+Rails/Delegate:
+  Enabled: true
+  EnforceForPrefixed: true
+
+Rails/DelegateAllowBlank:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: true
+#  Whitelist:
+#    - find_by_sql
+
+Rails/EnumUniqueness:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/EnvironmentComparison:
+  Enabled: true
+
+Rails/Exit:
+  Enabled: true
+  Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - lib/**/*.rb
+  Exclude:
+    - lib/**/*.rake
+
+Rails/FilePath:
+  Enabled: true
+
+Rails/FindBy:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/FindEach:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/HasAndBelongsToMany:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+# Override
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+# Override
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/HttpStatus:
+  Enabled: true
+  EnforcedStyle: symbolic
+
+Rails/InverseOf:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: true
+  Include:
+    - app/controllers/**/*.rb
+
+# Override
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/Output:
+  Enabled: true
+  Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - db/**/*.rb
+    - lib/**/*.rb
+
+Rails/OutputSafety:
+  Enabled: true
+
+Rails/PluralizationGrammar:
+  Enabled: true
+
+Rails/Presence:
+  Enabled: true
+
+# Override
+Rails/Present:
+  Enabled: true
+  NotNilAndNotEmpty: true
+  NotBlank: false
+  UnlessBlank: false
+
+Rails/ReadWriteAttribute:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/RedundantReceiverInWithOptions:
+  Enabled: true
+
+# Override
+Rails/RefuteMethods:
+  Enabled: false
+
+# Override
+Rails/RelativeDateConstant:
+  Enabled: true
+  AutoCorrect: true
+
+# Override
+Rails/RequestReferer:
+  Enabled: true
+  EnforcedStyle: referrer
+
+# Override
+Rails/ReversibleMigration:
+  Enabled: false
+
+# Override
+Rails/SafeNavigation:
+  Enabled: true
+  ConvertTry: true
+
+# Override
+Rails/SaveBang:
+  Enabled: true
+  AllowImplicitReturn: true
+  AllowedReceivers: []
+
+Rails/ScopeArgs:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb
+
+Rails/SkipsModelValidations:
+  Enabled: true
+  ForbiddenMethods:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - touch
+    - update_all
+    - update_attribute
+    - update_column
+    - update_columns
+    - update_counters
+#  Whitelist: []
+
+Rails/TimeZone:
+  Enabled: true
+  EnforcedStyle: flexible
+
+# Override
+Rails/UniqBeforePluck:
+  Enabled: true
+  EnforcedStyle: conservative
+  AutoCorrect: true
+
+Rails/UnknownEnv:
+  Enabled: true
+  Environments:
+    - development
+    - test
+    - production
+
+Rails/Validation:
+  Enabled: true
+  Include:
+    - app/models/**/*.rb

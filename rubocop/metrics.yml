@@ -1,0 +1,45 @@
+# Override
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+
+# Override
+Metrics/BlockLength:
+  Enabled: false
+
+# Override
+Metrics/BlockNesting:
+  Enabled: true
+  CountBlocks: false
+  Max: 2
+
+Metrics/ClassLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+# Override
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 5
+
+# Override
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 15
+  ExcludedMethods: []
+
+Metrics/ModuleLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 5
+  CountKeywordArgs: true
+
+# Override
+Metrics/PerceivedComplexity:
+  Enabled: false

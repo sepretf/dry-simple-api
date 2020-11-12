@@ -1,0 +1,90 @@
+# Override
+Performance/Caller:
+  Enabled: false
+
+Performance/CaseWhenSplat:
+  Enabled: false
+
+# Override
+Performance/Casecmp:
+  Enabled: false
+
+Performance/ChainArrayAllocation:
+  Enabled: false
+
+Performance/CompareWithBlock:
+  Enabled: true
+
+Performance/Count:
+  Enabled: true
+  SafeAutoCorrect: true
+
+Performance/Detect:
+  Enabled: true
+  SafeAutoCorrect: true
+
+Performance/DoubleStartEndWith:
+  Enabled: true
+  IncludeActiveSupportAliases: false
+
+# Override
+Performance/EndWith:
+  Enabled: true
+  AutoCorrect: true
+
+# Override
+Performance/FixedSize:
+  Enabled: false
+
+# Override
+Performance/FlatMap:
+  Enabled: true
+  EnabledForFlattenWithoutParams: true
+
+Performance/InefficientHashSearch:
+  Enabled: true
+
+# Override
+Performance/RangeInclude:
+  Enabled: false
+
+Performance/RedundantBlockCall:
+  Enabled: true
+
+# Override
+Performance/RedundantMatch:
+  Enabled: false
+
+# Override
+Performance/RedundantMerge:
+  Enabled: true
+  MaxKeyValuePairs: 1
+
+Performance/RegexpMatch:
+  Enabled: true
+
+Performance/ReverseEach:
+  Enabled: true
+
+Performance/Size:
+  Enabled: true
+
+# Override
+Performance/StartWith:
+  Enabled: true
+  AutoCorrect: true
+
+Performance/StringReplacement:
+  Enabled: true
+
+Performance/TimesMap:
+  Enabled: true
+  AutoCorrect: false
+
+# Override
+Performance/UnfreezeString:
+  Enabled: false
+
+# Override
+Performance/UriDefaultParser:
+  Enabled: false

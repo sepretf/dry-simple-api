@@ -1,0 +1,14 @@
+---
+:concurrency: 40
+staging:
+  :concurrency: 10
+demo:
+  :concurrency: 10
+quality:
+  :concurrency: 2
+production:
+  :concurrency: 50
+:queues:
+  - critical
+  - default
+  - low

@@ -1,0 +1,43 @@
+development:
+  clients:
+    default:
+      database: plezi_development
+      hosts:
+        - localhost:27017
+test:
+  clients:
+    default:
+      database: plezi_test
+      hosts:
+        - localhost:27017
+staging:
+  clients:
+    default:
+      database: <%= ENV['MONGO_DB'] %>
+      hosts:
+        - <%= ENV['MONGO_HOST'] %>
+production:
+  clients:
+    default:
+      database: <%= ENV['MONGO_DB'] %>
+      hosts:
+        - <%= ENV['MONGO_HOST'] %>
+      auth_source: 'admin'
+      auth_mech: :scram
+      options:
+        write:
+          w: 1
+        read:
+          mode: :primary
+        user: <%= ENV['MONGO_USER'] %>
+        password: <%= ENV['MONGO_PWD'] %>
+        auth_mech: :scram
+        auth_source: 'admin'
+        heartbeat_frequency: 10
+        local_threshold: 0.015
+        server_selection_timeout: 15
+        max_pool_size: 100
+        min_pool_size: 30
+        wait_queue_timeout: 15
+        connect_timeout: 15
+        socket_timeout: 15

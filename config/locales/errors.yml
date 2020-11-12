@@ -1,0 +1,5 @@
+en:
+  plezi:
+    errors:
+      filled?: 'is missing'
+

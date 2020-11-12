@@ -1,0 +1,6 @@
+Capybara/CurrentPathExpectation:
+  Enabled: true
+
+Capybara/FeatureMethods:
+  Enabled: true
+  EnabledMethods: []

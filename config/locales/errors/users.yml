@@ -1,0 +1,22 @@
+en:
+  plezi:
+    errors:
+      users:
+        email_is_missing:
+          code: 'users-0001'
+        first_name_is_missing:
+          code: 'users-0002'
+        last_name_is_missing:
+          code: 'users-0003'
+        email_must_be_a_string:
+          code: 'users-0004'
+        first_name_be_a_string:
+          code: 'users-0005'
+        last_name_must_be_a_string:
+          code: 'users-0006'
+        password_is_in_invalid_format:
+          code: 'users-0007'
+        email_is_in_invalid_format:
+          code: 'users-0008'
+        email_must_be_uniq:
+          code: 'users-0009'

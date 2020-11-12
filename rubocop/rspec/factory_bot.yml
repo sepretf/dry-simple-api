@@ -1,0 +1,6 @@
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true
+
+FactoryBot/CreateList:
+  Enabled: true
+  EnforcedStyle: create_list

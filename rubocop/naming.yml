@@ -1,0 +1,147 @@
+Naming/AccessorMethodName:
+  Enabled: true
+
+Naming/AsciiIdentifiers:
+  Enabled: true
+
+Naming/BinaryOperatorParameterName:
+  Enabled: true
+
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+
+Naming/ConstantName:
+  Enabled: true
+
+# Override
+Naming/FileName:
+  Enabled: true
+  Exclude: []
+  ExpectMatchingDefinition: true
+  Regex: ~
+  IgnoreExecutableScripts: false
+  AllowedAcronyms:
+    - CLI
+    - DSL
+    - ACL
+    - API
+    - ASCII
+    - CPU
+    - CSS
+    - DNS
+    - EOF
+    - GUID
+    - HTML
+    - HTTP
+    - HTTPS
+    - ID
+    - IP
+    - JSON
+    - LHS
+    - QPS
+    - RAM
+    - RHS
+    - RPC
+    - SLA
+    - SMTP
+    - SQL
+    - SSH
+    - TCP
+    - TLS
+    - TTL
+    - UDP
+    - UI
+    - UID
+    - UUID
+    - URI
+    - URL
+    - UTF8
+    - VM
+    - XML
+    - XMPP
+    - XSRF
+    - XSS
+
+Naming/HeredocDelimiterCase:
+  Enabled: true
+  EnforcedStyle: uppercase
+
+Naming/HeredocDelimiterNaming:
+  Enabled: true
+  ForbiddenDelimiters:
+    - !ruby/regexp '/(^|\s)(EO[A-Z]{1}|END)(\s|$)/'
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+  EnforcedStyleForLeadingUnderscores: disallowed
+
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# Override
+Naming/PredicateName:
+  Enabled: true
+  NamePrefix:
+    - at_
+    - by_
+    - can
+    - for_
+    - has_
+    - have_
+    - in_
+    - is_
+    - nb
+    - number
+    - numbers
+#    - on_
+  ForbiddenPrefixes:
+    - at_
+    - by_
+    - can_
+    - for_
+    - has_
+    - have_
+    - in_
+    - is_
+    - nb
+    - number
+    - numbers
+#    - on_
+#  NameWhitelist: []
+  MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
+  Exclude:
+    - 'spec/**/*'
+
+# Override
+Naming/RescuedExceptionsVariableName:
+  Description: 'Use consistent rescued exceptions variables naming.'
+  Enabled: true
+  PreferredName: exception
+
+# Override
+Naming/BlockParameterName:
+  Enabled: true
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: false
+  AllowedNames: [_, io, id]
+  ForbiddenNames: []
+
+# Override
+Naming/MethodParameterName:
+  Enabled: true
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: false
+  AllowedNames: [io, id]
+  ForbiddenNames: []
+
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# Override
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: non_integer
