@@ -2,16 +2,19 @@
 
 This is a authentification REST API.
 
-Thought and designed to be tested with rspec in ./spec/
+Using: PostgreSQL, Dry-RB, JSonapi-serializer
+
+Thought and designed to be tested with RSPEC in ./spec/
 
 Code architecture rules for this project were:
-  - No logic in controller
-  - Data serializer
+  - Limit logic in controller
   - Forms to create object
+  - Validators to check data received 
   - Queries to fetch data
+  - Data serializer
   - Use services for logic
-  - Easy to test / stub 
-
+  - Easy to test and to stub data
+  
 ## Install
 
     bundle install
